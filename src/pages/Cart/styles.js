@@ -12,7 +12,7 @@ export const Ul = styled.ul`
   width: 100%;
   max-width: 300px;
 
-  padding: 12px 0;
+  padding: 12px;
 
   border-radius: 8px;
 
@@ -84,6 +84,8 @@ export const Li = styled.li`
   button {
     color: red;
     background-color: transparent;
+
+    margin-top: -3px;
 
     font-size: 1.25rem;
   }

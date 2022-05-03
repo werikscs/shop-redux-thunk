@@ -13,7 +13,7 @@ import * as S from "./styles";
 const Home = () => {
   const dispatch = useDispatch();
 
-  const cartVisibility = useSelector((state) => state.cartVisibility);
+  const cartVisibility = useSelector((state) => state.header);
 
   const [products, setProducts] = useState([]);
 

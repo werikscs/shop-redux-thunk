@@ -3,11 +3,15 @@ import { addToCart, removeFromCart } from "./actions";
 export const addToCartThunk = (product) => (dispatch) => {
   const list = JSON.parse(localStorage.getItem("@KenzieShop:cart")) || [];
 
-  const newList = [...list, product];
+  const isProductInCart = list.some(({ id }) => product.id === id);
 
-  localStorage.setItem("@KenzieShop:cart", JSON.stringify(newList));
+  if (!isProductInCart) {
+    const newList = [...list, product];
 
-  dispatch(addToCart(product));
+    localStorage.setItem("@KenzieShop:cart", JSON.stringify(newList));
+
+    dispatch(addToCart(product));
+  }
 };
 
 export const removeFromCartThunk = (productId) => (dispatch) => {
