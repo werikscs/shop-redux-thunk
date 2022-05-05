@@ -2,18 +2,28 @@ import styled from "styled-components";
 
 export const Section = styled.section`
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   gap: 32px;
+
+  position: relative;
 
   margin: 8px 0;
   padding: 0 16px;
 
   width: 100%;
   max-width: var(--max-width);
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 `;
 
 export const Ul = styled.ul`
   list-style: none;
+
+  order: 2;
 
   display: flex;
   justify-content: center;
@@ -21,7 +31,13 @@ export const Ul = styled.ul`
   flex-wrap: wrap;
   gap: 32px;
 
+  margin-top: 86px;
+
   width: 100%;
+
+  @media screen and (min-width: 768px) {
+    order: 0;
+  }
 `;
 
 export const Li = styled.li`

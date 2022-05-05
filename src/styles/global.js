@@ -27,12 +27,19 @@ export default createGlobalStyle`
     align-items: center;
 
     width: 100%;
+    min-width: 320px;
     min-height: 100vh;
+
+    position: relative;
 
     hr{
       width: 100%;
       height: 1px;
-      background-color: var(--color-black);
+      background-color: var(--color-blue-navy);
+
+      position: fixed;
+      top: 70px;
+      z-index: 10;
     }
 
     background-color: var(--color-gray);

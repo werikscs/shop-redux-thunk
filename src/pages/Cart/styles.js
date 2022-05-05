@@ -10,13 +10,24 @@ export const Ul = styled.ul`
   gap: 8px;
 
   width: 100%;
-  max-width: 300px;
+  max-width: 610px;
+
+  position: sticky;
+  top: 86px;
 
   padding: 12px;
 
   border-radius: 8px;
 
   background-color: var(--color-white);
+
+  @media screen and (min-width: 768px) {
+    /* position: static; */
+
+    margin-top: 86px;
+
+    max-width: 340px;
+  }
 
   div {
     display: flex;
